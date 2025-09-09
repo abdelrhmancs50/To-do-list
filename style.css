@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.todo-container {
+  width: 600px;
+  margin: 30px auto 0;
+  background-color: #f6f6f6;
+}
+.add-task {
+  padding: 15px;
+  background-color: #009688;
+  position: relative;
+}
+.add-task input {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 20px;
+  width: calc(100% - 20px);
+}
+
+.add-task input:focus {
+  outline: none;
+}
+.add-task .plus {
+  position: absolute;
+  height: 43px;
+  width: 43px;
+  background-color: #fff;
+  color: #009688;
+  right: 12px;
+  border-radius: 50%;
+  line-height: 43px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 48px;
+  transition: transform 0.3s;
+}
+.add-task .plus:hover {
+  transform: rotate(90deg);
+}
+.todo-container .tasks-content {
+  padding: 15px;
+}
+.todo-container .tasks-content .no-tasks-message {
+  color: #777;
+  font-size: 15px;
+}
+.todo-container .tasks-content > span {
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+}
+.todo-container .tasks-content > span:not(:last-child) {
+  margin-bottom: 10px;
+}
+.todo-container .tasks-content .task-box .delete {
+  float: right;
+  background-color: #e91e63;
+  padding: 4px 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo-container .tasks-content .task-box.finished {
+  text-decoration: line-through;
+}
+.task-stats {
+  overflow: hidden;
+  margin: 10px auto;
+  width: 600px;
+  font-size: 12px;
+}
+.task-stats .tasks-count {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+.task-stats .completed-tasks {
+  width: 50%;
+  float: right;
+  padding: 10px;
+  text-align: right;
+}
+.task-stats .tasks-count span,
+.task-stats .completed-tasks span {
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+.task-stats .tasks-count span {
+  background-color: #e91e63;
+}
+.task-stats .completed-tasks span {
+  background-color: #03a9f4;
+}
+.all-tasks-control {
+  width: 600px;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.all-tasks-control .delete-all,
+.all-tasks-control .complete-all {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.all-tasks-control .delete-all {
+  background-color: #e91e63;
+}
+.all-tasks-control .complete-all {
+  background-color: #03a9f4;
+}
+@media (max-width: 767px) {
+  .todo-container,
+  .task-stats,
+  .all-tasks-control {
+    width: 350px;
+  }
+  .todo-container {
+    margin: 20px auto 0;
+  }
+}
